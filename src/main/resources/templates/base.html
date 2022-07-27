@@ -25,7 +25,8 @@
 	class="logo-container mb-3 p-3 d-flex justify-content-between">
 	<span class="logo">mudi</span> <span class="mt-3">
 	<a href="/login" class="text-light" sec:authorize="!isAuthenticades()">Login</a>
-	<a href="/logout" class="text-light" sec:authorize="isAuthenticated()">Logout</a>
+	<a href="#" onclick="document.querySelector('#form-login').submit()" class="text-light" sec:authorize="isAuthenticated()">Logout</a>
+	<form id="form-login" th:action="@{/logout}" method="post"></form>
 	</span>
 </div>
 
